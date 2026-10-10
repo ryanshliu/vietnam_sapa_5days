@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深入北越・精彩沙壩 5 日遊｜番西邦峰登山列車與傳奇纜車・小瑞士三島國家公園・36古街</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8faf7;
+      --card-bg: #ffffff;
+      --primary: #1b5e3a;
+      --primary-light: #e8f5ed;
+      --accent: #c05621;
+      --accent-light: #feebc8;
+      --gold: #d69e2e;
+      --dark: #24292e;
+      --muted: #586069;
+      --border: #dcdfe4;
+      --shadow: 0 4px 16px rgba(0,0,0,0.06);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      background-image: radial-gradient(#dbe7df 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: var(--dark);
+      line-height: 1.65;
+      padding-bottom: 80px;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 16px 14px;
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      background: linear-gradient(135deg, #134e2f 0%, #1c6b43 60%, #2f855a 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(19, 78, 47, 0.25);
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .hero-tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.2);
+    }
+    .hero-tag.highlight {
+      background: #e28743;
+      color: #fff;
+    }
+    .hero-title {
+      font-size: 1.85rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 0.92rem;
+      color: #d1fae5;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .hero-price-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 12px;
+      background: rgba(0,0,0,0.22);
+      border-radius: 10px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .hero-price {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #ffda79;
+    }
+    .hero-price-allin {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .hero-price-sub {
+      font-size: 0.8rem;
+      color: #e2e8f0;
+    }
+
+    /* PURE CSS TAB SYSTEM (RADIO BUTTONS) */
+    /* Hide the actual radio inputs */
+    input[name="main-nav-tab"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Tab bar */
+    .tab-nav-bar {
+      display: flex;
+      gap: 6px;
+      background: #fff;
+      padding: 6px;
+      border-radius: 999px;
+      border: 1.5px solid var(--border);
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+    }
+    .tab-nav-bar::-webkit-scrollbar { display: none; }
+    .tab-label {
+      flex: 1;
+      white-space: nowrap;
+      text-align: center;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      border-radius: 999px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+      display: block;
+    }
+    .tab-label:hover {
+      background: #f1f5f9;
+      color: var(--dark);
+    }
+
+    /* Highlighting active label using CSS :checked selector */
+    #tab-main-1:checked ~ .container .tab-nav-bar label[for="tab-main-1"],
+    #tab-main-2:checked ~ .container .tab-nav-bar label[for="tab-main-2"],
+    #tab-main-3:checked ~ .container .tab-nav-bar label[for="tab-main-3"],
+    #tab-main-4:checked ~ .container .tab-nav-bar label[for="tab-main-4"],
+    #tab-main-5:checked ~ .container .tab-nav-bar label[for="tab-main-5"] {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(27, 94, 58, 0.3);
+    }
+
+    /* Switching Main Panels using CSS :checked selector */
+    .tab-content-panel {
+      display: none;
+    }
+    #tab-main-1:checked ~ .container #panel-itinerary { display: block; }
+    #tab-main-2:checked ~ .container #panel-flights { display: block; }
+    #tab-main-3:checked ~ .container #panel-pricing { display: block; }
+    #tab-main-4:checked ~ .container #panel-highlights { display: block; }
+    #tab-main-5:checked ~ .container #panel-calc { display: block; }
+
+    /* DAY SELECTOR RADIO BUTTONS */
+    input[name="day-tab"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .day-selector-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .day-selector-bar::-webkit-scrollbar { display: none; }
+    .day-label {
+      flex: 1;
+      min-width: 95px;
+      text-align: center;
+      padding: 10px 8px;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .day-label:hover { border-color: var(--primary); }
+    .day-label .num { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; color: var(--muted); }
+    .day-label .sub { font-size: 0.85rem; font-weight: 900; margin-top: 2px; color: var(--dark); }
+
+    /* Active day styling via :checked */
+    #day-tab-1:checked ~ .container .day-selector-bar label[for="day-tab-1"],
+    #day-tab-2:checked ~ .container .day-selector-bar label[for="day-tab-2"],
+    #day-tab-3:checked ~ .container .day-selector-bar label[for="day-tab-3"],
+    #day-tab-4:checked ~ .container .day-selector-bar label[for="day-tab-4"],
+    #day-tab-5:checked ~ .container .day-selector-bar label[for="day-tab-5"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 4px 10px rgba(27,94,58,0.25);
+    }
+    #day-tab-1:checked ~ .container .day-selector-bar label[for="day-tab-1"] .num,
+    #day-tab-2:checked ~ .container .day-selector-bar label[for="day-tab-2"] .num,
+    #day-tab-3:checked ~ .container .day-selector-bar label[for="day-tab-3"] .num,
+    #day-tab-4:checked ~ .container .day-selector-bar label[for="day-tab-4"] .num,
+    #day-tab-5:checked ~ .container .day-selector-bar label[for="day-tab-5"] .num {
+      color: #a7f3d0;
+    }
+    #day-tab-1:checked ~ .container .day-selector-bar label[for="day-tab-1"] .sub,
+    #day-tab-2:checked ~ .container .day-selector-bar label[for="day-tab-2"] .sub,
+    #day-tab-3:checked ~ .container .day-selector-bar label[for="day-tab-3"] .sub,
+    #day-tab-4:checked ~ .container .day-selector-bar label[for="day-tab-4"] .sub,
+    #day-tab-5:checked ~ .container .day-selector-bar label[for="day-tab-5"] .sub {
+      color: #ffffff;
+    }
+
+    /* Day content display via :checked */
+    .day-detail-panel {
+      display: none;
+    }
+    #day-tab-1:checked ~ .container #day-detail-1 { display: block; }
+    #day-tab-2:checked ~ .container #day-detail-2 { display: block; }
+    #day-tab-3:checked ~ .container #day-detail-3 { display: block; }
+    #day-tab-4:checked ~ .container #day-detail-4 { display: block; }
+    #day-tab-5:checked ~ .container #day-detail-5 { display: block; }
+
+    /* CARD STYLES */
+    .card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid #edf2f7;
+    }
+    .card-title .icon { font-size: 1.3rem; }
+
+    .day-banner {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e6f4ea 100%);
+      border: 1.5px solid #bbf7d0;
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .day-badge-lg {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .day-badge-lg span { font-size: 0.65rem; font-weight: 700; opacity: 0.85; }
+    .day-header-info h3 { font-size: 1.15rem; font-weight: 800; color: #14532d; }
+    .day-header-info p { font-size: 0.85rem; color: #4b5563; margin-top: 3px; }
+
+    .day-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 600px) {
+      .day-meta-grid { grid-template-columns: 1fr; }
+    }
+    .meta-box {
+      background: #fbfbfc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.82rem;
+    }
+    .meta-box strong { color: var(--dark); font-weight: 700; display: inline-block; margin-bottom: 4px; }
+    .meta-item { display: flex; gap: 6px; margin-bottom: 3px; }
+    .meta-tag {
+      background: #e2e8f0;
+      color: #334155;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      height: fit-content;
+    }
+
+    .spot-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .spot-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .spot-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .spot-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .spot-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid #fde68a;
+    }
+    .spot-desc {
+      font-size: 0.88rem;
+      color: #374151;
+      line-height: 1.7;
+    }
+    .spot-feature-list {
+      margin-top: 10px;
+      padding-left: 18px;
+      font-size: 0.82rem;
+      color: #4b5563;
+    }
+    .spot-feature-list li { margin-bottom: 4px; }
+
+    /* Tables & Alerts */
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin-top: 8px;
+    }
+    .custom-table th, .custom-table td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .custom-table th { background: #f1f5f9; font-weight: 800; color: #1e293b; }
+    .custom-table tr:nth-child(even) td { background: #fafafa; }
+
+    .alert-box {
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      border-left: 4px solid;
+    }
+    .alert-green { background: #edf7ed; border-color: #2e7d32; color: #1e4620; }
+    .alert-orange { background: #fff8e1; border-color: #ffa000; color: #5d4037; }
+    .alert-blue { background: #e3f2fd; border-color: #1976d2; color: #0d47a1; }
+
+    .perk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .perk-card {
+      background: #f9fbf9;
+      border: 1.5px solid #d1e7dd;
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .perk-card h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .perk-card p {
+      font-size: 0.82rem;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .inclusion-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .inclusion-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.86rem;
+      line-height: 1.6;
+    }
+    .inclusion-num {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .calc-card {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1.5px solid #fde68a;
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+    .calc-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .calc-input {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1.5px solid #cbd5e1;
+      font-size: 1rem;
+      font-weight: 700;
+      width: 150px;
+    }
+    .calc-result {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #92400e;
+    }
+
+    .phrase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .phrase-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .phrase-vn { font-weight: 800; color: #1e3a8a; font-size: 0.95rem; }
+    .phrase-cn { font-size: 0.8rem; color: #64748b; margin-top: 2px; }
+
+    .footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #94a3b8;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HIDDEN RADIO INPUTS FOR PURE CSS MAIN NAVIGATION (No JS Required!) -->
+  <input type="radio" name="main-nav-tab" id="tab-main-1" checked>
+  <input type="radio" name="main-nav-tab" id="tab-main-2">
+  <input type="radio" name="main-nav-tab" id="tab-main-3">
+  <input type="radio" name="main-nav-tab" id="tab-main-4">
+  <input type="radio" name="main-nav-tab" id="tab-main-5">
+
+  <!-- HIDDEN RADIO INPUTS FOR PURE CSS DAY SELECTOR (No JS Required!) -->
+  <input type="radio" name="day-tab" id="day-tab-1" checked>
+  <input type="radio" name="day-tab" id="day-tab-2">
+  <input type="radio" name="day-tab" id="day-tab-3">
+  <input type="radio" name="day-tab" id="day-tab-4">
+  <input type="radio" name="day-tab" id="day-tab-5">
+
+<div class="container">
+
+  <!-- HERO BANNER -->
+  <header class="hero-banner">
+    <div class="hero-tags">
+      <span class="hero-tag highlight">全程無購物</span>
+      <span class="hero-tag">高雄小港直飛</span>
+      <span class="hero-tag">中南半島第一高峰</span>
+      <span class="hero-tag">少數民族風情</span>
+      <span class="hero-tag">法式高山山城</span>
+    </div>
+    <h1 class="hero-title">深入北越・精彩沙壩 5 日</h1>
+    <p class="hero-subtitle">番西邦峰 FANSIPAN 登山列車與傳奇纜車 ｜ 吉吉村 ｜ 黑苗族山村風情 ｜ 小瑞士三島國家公園 ｜ 河內 36 古街</p>
+
+    <div class="hero-price-bar">
+      <div>
+        <span class="hero-price-sub">現金優惠價：</span>
+        <span class="hero-price">NT$ 29,800</span>
+        <span class="hero-price-sub">/人 (不含小費 300元*5日=1500元)</span>
+      </div>
+      <div style="margin-left: auto;">
+        <span class="hero-price-allin">全包手寫參考價：<strong>NT$ 31,300</strong> 元</span>
+        <span class="hero-price-sub"> (含小費 1500元、接送 1000元、網卡)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PURE CSS MAIN NAVIGATION BAR -->
+  <nav class="tab-nav-bar">
+    <label class="tab-label" for="tab-main-1">📅 每日詳細行程</label>
+    <label class="tab-label" for="tab-main-2">✈️ 航班資訊</label>
+    <label class="tab-label" for="tab-main-3">💰 費用明細 & 簽證</label>
+    <label class="tab-label" for="tab-main-4">🎁 贈送與亮點</label>
+    <label class="tab-label" for="tab-main-5">💱 匯率試算與會話</label>
+  </nav>
+
+  <!-- PANEL 1: ITINERARY -->
+  <main id="panel-itinerary" class="tab-content-panel">
+    <!-- PURE CSS DAY SELECTOR BAR -->
+    <div class="day-selector-bar">
+      <label class="day-label" for="day-tab-1">
+        <span class="num">DAY 1</span>
+        <span class="sub">小港 ➔ 沙壩</span>
+      </label>
+      <label class="day-label" for="day-tab-2">
+        <span class="num">DAY 2</span>
+        <span class="sub">番西邦峰 ➔ 苗村</span>
+      </label>
+      <label class="day-label" for="day-tab-3">
+        <span class="num">DAY 3</span>
+        <span class="sub">韓龍山 ➔ 河內</span>
+      </label>
+      <label class="day-label" for="day-tab-4">
+        <span class="num">DAY 4</span>
+        <span class="sub">小瑞士三島公園</span>
+      </label>
+      <label class="day-label" for="day-tab-5">
+        <span class="num">DAY 5</span>
+        <span class="sub">36古街 ➔ 返台</span>
+      </label>
+    </div>
+
+    <!-- DAY 1 DETAILS -->
+    <div id="day-detail-1" class="day-detail-panel">
+      <div class="day-banner">
+        <div class="day-badge-lg">D1<span>DAY ONE</span></div>
+        <div class="day-header-info">
+          <h3>高雄小港機場 ➔ 河內國際機場 ➔ 沙壩【愛情市場・沙壩教堂】</h3>
+          <p>🚗 車程約 5 小時 ｜ 住宿酒店休息 ｜ 漫步歐風高山小鎮</p>
+        </div>
+      </div>
+
+      <div class="day-meta-grid">
+        <div class="meta-box">
+          <strong>🍽️ 餐食安排</strong>
+          <div class="meta-item"><span class="meta-tag">早餐</span> 空中美饌</div>
+          <div class="meta-item"><span class="meta-tag">中餐</span> Sai Gon Phu Tho 越式風味料理 (餐標 US$10/人)</div>
+          <div class="meta-item"><span class="meta-tag">晚餐</span> Sapa Charm Hotel 飯店迎賓越式料理 (餐標 US$15/人)</div>
+        </div>
+        <div class="meta-box">
+          <strong>🏨 住宿飯店 (四星級或同級)</strong>
+          <div>• Sapa Highland Resort & SPA</div>
+          <div>• Sapa U Hotel 沙壩悠精品飯店</div>
+          <div>• Sapa Charm Hotel 沙壩魅力酒店</div>
+          <div>• Lotus Aroma Sapa Hotel 或同級</div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🇻🇳 啟程・前往越南首都【河內】</div>
+          <span class="spot-tag">啟程動線</span>
+        </div>
+        <p class="spot-desc">
+          今日集合於高雄小港機場，搭乘越南航空豪華噴射客機直飛越南首都【河內】。河內是越南社會主義共和國的首都，也是北越最大的城市，總面積 2,130 平方公里，位於紅河南岸，為北越政治、文化、經濟與交通中心。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🌿 雲霧山城【沙壩 (Sapa)】中南半島避暑勝地</div>
+          <span class="spot-tag">重點景點</span>
+        </div>
+        <p class="spot-desc">
+          沙壩是中南半島最涼爽的地方，也是越南著名的內陸避暑勝地。宜人的氣候、迷人的自然風光、歐式建築與法式生活情調、質樸的民風民俗，吸引絡繹不絕的旅客，西方旅人更譽之為「人間天堂」。這裡世代居住著京族、苗族、瑤族、壯族、漢族、傣族、赫蒙族等少數民族。沙壩小鎮如同深閨中含羞的蒙面女子，質樸而羞怯、異域而婉約、秀麗又富風情，令人流連忘返。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">⛪【沙壩教堂 (石教堂)】高山信仰中心與愛情市場</div>
+          <span class="spot-tag">經典地標</span>
+        </div>
+        <p class="spot-desc">
+          位於沙壩鎮市中心的石教堂是全越南海拔最高的教堂。因海拔高、終年常被雲霧包圍，顯得格外莊嚴而神秘。石教堂是當地沙壩居民的信仰中心，許多居民傍晚會在此作彌撒，使用的多為少數民族當地方言。教堂前方廣場也是舉行各類慶典、市集活動與著名的「愛情市場」聚會場所。
+        </p>
+      </div>
+    </div>
+
+    <!-- DAY 2 DETAILS -->
+    <div id="day-detail-2" class="day-detail-panel">
+      <div class="day-banner">
+        <div class="day-badge-lg">D2<span>DAY TWO</span></div>
+        <div class="day-header-info">
+          <h3>征服中南半島屋脊！芒花登山列車 ➔ 番西邦傳奇纜車 ➔ 踏梅村 ➔ 苗族市集 ➔ 吉吉村</h3>
+          <p>🚠 纜車與高山景觀 ｜ 🌾 梯田風光 ｜ 🍲 鱘龍魚火鍋大餐</p>
+        </div>
+      </div>
+
+      <div class="day-meta-grid">
+        <div class="meta-box">
+          <strong>🍽️ 餐食安排</strong>
+          <div class="meta-item"><span class="meta-tag">早餐</span> 飯店內享用豐盛早餐</div>
+          <div class="meta-item"><span class="meta-tag">中餐</span> Fansipan 園區內自助餐 (不含酒水)</div>
+          <div class="meta-item"><span class="meta-tag">晚餐</span> HAI YEN 餐廳燒烤吃到飽 + 鱘龍魚火鍋 (餐標 US$18/人)</div>
+        </div>
+        <div class="meta-box">
+          <strong>🏨 住宿飯店 (四星級或同級)</strong>
+          <div>• Sapa Highland Resort & SPA</div>
+          <div>• Sapa U Hotel 沙壩悠精品飯店</div>
+          <div>• Sapa Charm Hotel 沙壩魅力酒店 或同級</div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🚂【芒花登山列車】法國復古風情觀景列車</div>
+          <span class="spot-tag">必搭亮點</span>
+        </div>
+        <p class="spot-desc">
+          連接沙壩鎮與番西邦纜車站，全長約 2 公里，為全越南目前旅程最長的登山列車。起點沙壩站由世界級建築大師比爾·本斯利 (Bill Bensley) 設計，靈感汲取自法國 1920~1930 年代古老經典車站，重現昔日優雅。列車沿途可俯瞰黃連山脈與深邃山谷壯闊景致。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🚠【番西邦傳奇纜車】中南半島第一高峰 (海拔 3,143m)</div>
+          <span class="spot-tag">世界紀錄</span>
+        </div>
+        <p class="spot-desc">
+          由太陽集團 (Sun World) 打造之金氏世界紀錄最長三線纜車系統，單趟約 20 分鐘即可直抵高空平台。可欣賞 Muong Hoa 山谷與黃連山脈。抵達平台後，可參觀越南目前最大的釋迦牟尼青銅巨佛像，或拾階而上攻頂 3,143 米最高點，置身宛如人間仙境的雲海之上！
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🌾【踏梅村 (Ta Van)】黑苗族村落與螺旋狀絕美梯田</div>
+          <span class="spot-tag">田園秘境</span>
+        </div>
+        <p class="spot-desc">
+          沙壩著名的少數民族聚落，主要為黑苗族生活村落。走入鄉村自然風光，映入眼簾的是層層疊疊、綠油油的螺旋狀梯田風貌，純樸自然，田園氣息清新怡人。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🧺【沙壩少數民族市場】地道少數民族手作工藝與乾果特產</div>
+          <span class="spot-tag">在地風情</span>
+        </div>
+        <p class="spot-desc">
+          匯聚了沙壩當地的黑苗族、紅苗族等居民。集市內琳瑯滿目，販售各類天然中藥材、堅果、果乾、山林蔬菜，以及少數民族婦女親手縫製的手工刺繡小錢包與精美吊飾，非常適合作為伴手禮。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🏘️【吉吉村 (Cat Cat Village)】沒有貓的傳統貓貓村</div>
+          <span class="spot-tag">經典古聚落</span>
+        </div>
+        <p class="spot-desc">
+          被譽為沙壩最美村莊之一。赫蒙族人於 19 世紀中葉自雲南遷徙至此。法屬殖民時期音譯為「CatScat」，因而被親切地通稱為貓村。村落依山傍水，擁有美麗清澈的河岸風光、壯麗水車瀑布與多姿多彩的苗族傳統服飾與銀飾手工藝。
+        </p>
+      </div>
+
+      <div class="spot-card" style="border-left: 4px solid #d97706;">
+        <div class="spot-header">
+          <div class="spot-title">🐟【超人氣高山鱘龍魚火鍋】晚宴特色美饌</div>
+          <span class="spot-tag">風味美食</span>
+        </div>
+        <p class="spot-desc">
+          沙壩高山水質純淨、溶氧量極高，自 2006 年起成為養殖鱘龍魚之重鎮。富含膠原蛋白的新鮮鱘龍魚肉質紮實綿密、無任何腥味，涮入特製高湯中品嚐，滋味鮮甜無比！
+        </p>
+      </div>
+    </div>
+
+    <!-- DAY 3 DETAILS -->
+    <div id="day-detail-3" class="day-detail-panel">
+      <div class="day-banner">
+        <div class="day-badge-lg">D3<span>DAY THREE</span></div>
+        <div class="day-header-info">
+          <h3>韓龍山景觀公園 ➔ 銀色瀑布 ➔ 老街・河口關 (中越邊界) ➔ 返回河內</h3>
+          <p>🏞️ 俯瞰沙壩市景 ｜ 💦 200米壯觀飛瀑 ｜ 🚗 車程約 5 小時返河內</p>
+        </div>
+      </div>
+
+      <div class="day-meta-grid">
+        <div class="meta-box">
+          <strong>🍽️ 餐食安排</strong>
+          <div class="meta-item"><span class="meta-tag">早餐</span> 飯店內享用早餐</div>
+          <div class="meta-item"><span class="meta-tag">中餐</span> Indigo 庭園餐廳特色風味餐 (餐標 US$10/人)</div>
+          <div class="meta-item"><span class="meta-tag">晚餐</span> Sen Vang Plat 越式料理 (餐標 US$15/人)</div>
+        </div>
+        <div class="meta-box">
+          <strong>🏨 住宿飯店 (河內四星級或同級)</strong>
+          <div>• London Hotel 河內倫敦飯店</div>
+          <div>• Caugiay Hotel 飯店</div>
+          <div>• La Casa Hotel 或同級</div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🌸【韓龍山景觀公園 (Ham Rong Mountain)】俯瞰沙壩全貌</div>
+          <span class="spot-tag">絕佳制高點</span>
+        </div>
+        <p class="spot-desc">
+          山巒間煙霧繚繞如在仙境。漫步其中，五顏六色的奇花異草盛開。登上頂峰可遠眺番西邦群峰並將整個沙壩鎮的歐式洋樓與山巒湖泊盡收眼底。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🌊【銀色瀑布 (Silver Waterfall)】含門票</div>
+          <span class="spot-tag">磅礡飛瀑</span>
+        </div>
+        <p class="spot-desc">
+          位於沙壩市區東南方約 12 公里處。瀑布由高達 200 米的峭壁傾瀉而下，直注入山谷清溪之中，水聲隆隆、水霧瀰漫，氣勢磅礴雄偉。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🌉【老街・河口關】中越邊境交界巡禮</div>
+          <span class="spot-tag">邊界口岸</span>
+        </div>
+        <p class="spot-desc">
+          河口關是越南通往大陸雲南省的交接關口，一橋之隔便跨入另一國度。周圍商業熱絡，隨處可見中文字招牌與邊貿市集，形成特殊的小中國城風貌。參觀後專車返回首都河內。
+        </p>
+      </div>
+    </div>
+
+    <!-- DAY 4 DETAILS -->
+    <div id="day-detail-4" class="day-detail-panel">
+      <div class="day-banner">
+        <div class="day-badge-lg">D4<span>DAY FOUR</span></div>
+        <div class="day-header-info">
+          <h3>避暑秘境【小瑞士三島國家公園】石頭教堂・天堂之門・三島市集・SEN西湖蓮花自助餐</h3>
+          <p>🏰 法式殖民古堡風情 ｜ ☁️ 雲上咖啡 ｜ 🍱 越南最大百匯蓮花餐廳</p>
+        </div>
+      </div>
+
+      <div class="day-meta-grid">
+        <div class="meta-box">
+          <strong>🍽️ 餐食安排</strong>
+          <div class="meta-item"><span class="meta-tag">早餐</span> 飯店內早餐</div>
+          <div class="meta-item"><span class="meta-tag">中餐</span> CAMELIA TAM DAO 中越式風味餐 (餐標 US$15/人)</div>
+          <div class="meta-item"><span class="meta-tag">晚餐</span> SEN 蓮花庭園餐廳自助餐 (不含酒水，餐標 US$25/人)</div>
+        </div>
+        <div class="meta-box">
+          <strong>🏨 住宿飯店 (河內四星級或同級)</strong>
+          <div>• London Hotel 河內倫敦飯店</div>
+          <div>• Caugiay Hotel 飯店</div>
+          <div>• La Casa Hotel 或同級</div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🌲【三島國家公園 (Tam Dao)】越南小瑞士</div>
+          <span class="spot-tag">法式高山勝地</span>
+        </div>
+        <p class="spot-desc">
+          海拔超過 1,000 公尺，由二十多個峰巒組成。三島鎮於西元 1907 年法殖民時期所建立，遺留眾多法式城堡建築。氣候常年涼爽、雲霧繚繞，充滿歐洲松林、湖泊、瀑布與繁花的高山氣息。
+        </p>
+        <ul class="spot-feature-list">
+          <li><strong>石頭教堂與天堂之門：</strong>建於 1906 年法式哥德建築，與沙壩、寧平、芽莊並列為越南四大石頭教堂；拱形門廊可鳥瞰三島全景。</li>
+          <li><strong>風中奇緣 QUAN GIO (外拍)：</strong>「雲上的咖啡館」，眺望法式城堡與金色夕陽餘暉的最佳視角。</li>
+          <li><strong>三島傳統市集：</strong>特產核桃、栗子、獨特蜜蘋果、道地竹筒飯與山豬肉烤肉香腸。</li>
+          <li><strong>三島公園與 ROCK 餐廳：</strong>阿爾卑斯木造歐式建築，清幽浪漫的年輕人約會打卡聖地。</li>
+        </ul>
+      </div>
+
+      <div class="spot-card" style="border-left: 4px solid #16a34a;">
+        <div class="spot-header">
+          <div class="spot-title">🍲【SEN 蓮花庭園自助餐廳】全越南規模最大美食殿堂</div>
+          <span class="spot-tag">老饕必吃 (US$25/人)</span>
+        </div>
+        <p class="spot-desc">
+          創立於 2004 年，坐落於美麗西湖畔。匯集越南北部、中部、南部地道傳統菜色，更包含海鮮、日本料理與歐陸佳餚，現場提供超過 150 道精緻道地菜色！
+        </p>
+      </div>
+    </div>
+
+    <!-- DAY 5 DETAILS -->
+    <div id="day-detail-5" class="day-detail-panel">
+      <div class="day-banner">
+        <div class="day-badge-lg">D5<span>DAY FIVE</span></div>
+        <div class="day-header-info">
+          <h3>河內市區文化漫遊【36古街電瓶車・還劍湖・鎮國寺・西湖・巴亭廣場】➔ 返回高雄</h3>
+          <p>🛵 含電瓶車導覽 ｜ ☕ 贈椰奶咖啡一杯 ｜ ✈️ 滿載回憶平安返國</p>
+        </div>
+      </div>
+
+      <div class="day-meta-grid">
+        <div class="meta-box">
+          <strong>🍽️ 餐食安排</strong>
+          <div class="meta-item"><span class="meta-tag">早餐</span> 飯店內享用早餐</div>
+          <div class="meta-item"><span class="meta-tag">中餐</span> 黎苑港式餐廳合菜 (含酒水，餐標 US$15/人)</div>
+          <div class="meta-item"><span class="meta-tag">晚餐</span> 溫暖的家</div>
+        </div>
+        <div class="meta-box">
+          <strong>🏨 住宿安排</strong>
+          <div>抵達溫暖可愛的家園</div>
+        </div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🛺【36 古街 (含搭乘電瓶車遊覽)】贈送椰奶咖啡一杯</div>
+          <span class="spot-tag">歷史活化石</span>
+        </div>
+        <p class="spot-desc">
+          源自 11 世紀李王朝皇帝城邑，各行各業師傅分街而居，原氾濫區演變為如今 76 條熱鬧老街，至今街名仍沿用昔日各行各業名稱（如銀街、鞋街等）。特別安排搭乘綠能電瓶車悠遊穿梭古巷，並享用香濃道地的越南椰奶咖啡！
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🐢【還劍湖 (Hoan Kiem Lake)】河內歷史心臟</div>
+          <span class="spot-tag">市中心地標</span>
+        </div>
+        <p class="spot-desc">
+          位於市中心，四周林木蒼翠，湖水清澈如明鏡。湖心南北分別座落著歷經歲月洗禮的龜塔與玉山寺，相傳為黎太祖歸還神劍給神龜之處。
+        </p>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-header">
+          <div class="spot-title">🛕【鎮國寺、西湖景區、巴亭廣場】</div>
+          <span class="spot-tag">六世紀千年古剎</span>
+        </div>
+        <p class="spot-desc">
+          <strong>鎮國寺：</strong>建於公元六世紀的河內最古老佛寺（原名開國寺），寺內供奉臥佛、千手觀音與彌勒佛，庭院中有一株 1959 年印度總統贈送、源自菩提伽耶佛陀成道聖樹分枝的巨大菩提樹。<br>
+          <strong>西湖與巴亭廣場：</strong>西湖水岸風光明媚，巴亭廣場則是舉行重大集會與國家閱兵之歷史聖地。隨後專車前往內排機場直飛返回高雄！
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- PANEL 2: FLIGHTS -->
+  <section id="panel-flights" class="tab-content-panel">
+    <div class="card">
+      <div class="card-title"><span class="icon">✈️</span> 國際航班時刻表 (越南航空 Vietnam Airlines)</div>
+      <p style="font-size:0.86rem; color:var(--muted); margin-bottom:12px;">高雄小港機場 (KHH) 直飛往返 河內內排國際機場 (HAN)，省時舒適：</p>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>航程階段</th>
+            <th>航空公司</th>
+            <th>航班代號</th>
+            <th>出發地 ➔ 目的地</th>
+            <th>起飛時間</th>
+            <th>到達時間</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>去程 (Day 1)</strong></td>
+            <td>越南航空</td>
+            <td><strong>VN-587</strong></td>
+            <td>高雄小港 (KHH) ➔ 河內 (HAN)</td>
+            <td>08:40</td>
+            <td>10:20</td>
+          </tr>
+          <tr>
+            <td><strong>回程 (Day 5)</strong></td>
+            <td>越南航空</td>
+            <td><strong>VN-586</strong></td>
+            <td>河內 (HAN) ➔ 高雄小港 (KHH)</td>
+            <td>18:20</td>
+            <td>21:45</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="alert-box alert-orange" style="margin-top:14px;">
+        ⚠️ <strong>注意事項：</strong>如遇航空公司變動航班，本公司保有最後變動之權力，並以行前說明會資料為準。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🧳</span> 行李托運與手提行李規定</div>
+      <ul style="padding-left:20px; font-size:0.86rem; line-height:1.7;">
+        <li><strong>免費託運行李：</strong>每位旅客託運行李 <strong>23 kg 以內 / 1 件</strong>。</li>
+        <li><strong>手提行李與隨身物品：</strong>手提行李 1 件 + 隨身物品 1 件，總重量合計 <strong>10 kg 以內 / 2 件</strong>。</li>
+        <li>行動電源、鋰電池、打火機（1只隨身）務必放在隨身隨身包，切勿託運。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PANEL 3: PRICING -->
+  <section id="panel-pricing" class="tab-content-panel">
+    <div class="card">
+      <div class="card-title"><span class="icon">💵</span> 費用說明與報價明細</div>
+      <div class="alert-box alert-green">
+        <strong>💰 團費售價：</strong><br>
+        • 印製標準現金價：<strong>NT$ 29,800 元 / 人</strong>（不含隨團司機導遊小費，每人每日 300 × 5日 = NT$ 1,500 元）<br>
+        • 手寫實收全包價：<strong>NT$ 31,300 元</strong>（含導遊小費 1,500 元 ＋ 機場接送 1,000 元 ＋ 旅遊網卡）
+      </div>
+
+      <h4 style="margin:16px 0 10px; font-size:0.95rem;">📦 費用包含項目：</h4>
+      <ul class="inclusion-list">
+        <li class="inclusion-item">
+          <span class="inclusion-num">1</span>
+          <div><strong>來回機票：</strong>高雄小港國際機場 ⇄ 河內國際機場來回團體機票（含託運 23kg/1件，手提隨身 10kg/2件）。</div>
+        </li>
+        <li class="inclusion-item">
+          <span class="inclusion-num">2</span>
+          <div><strong>旅行業責任險：</strong>每人提高至 <strong>500 萬責任險 ＋ 20 萬意外醫療險</strong>（★依保險法規：未滿 15 足歲或年滿 70 足歲之旅客，旅責險投保上限為 250 萬元）。</div>
+        </li>
+        <li class="inclusion-item">
+          <span class="inclusion-num">3</span>
+          <div><strong>優質住宿：</strong>沙壩當地四星飯店二晚 ＋ 河內市區四星飯店二晚（兩人一室）。</div>
+        </li>
+        <li class="inclusion-item">
+          <span class="inclusion-num">4</span>
+          <div><strong>全程餐食：</strong>早餐 × 4 次、中餐 × 5 次、晚餐 × 4 次（含多場高餐標美饌、蓮花自助餐及鱘龍魚火鍋）。</div>
+        </li>
+        <li class="inclusion-item">
+          <span class="inclusion-num">5</span>
+          <div><strong>專用座車：</strong>全程安排搭乘豪華空調觀光巴士。</div>
+        </li>
+        <li class="inclusion-item">
+          <span class="inclusion-num">6</span>
+          <div><strong>景點門票與手續：</strong>芒花登山列車 ＋ 番西邦傳奇纜車門票、韓龍景觀公園門票、銀色瀑布門票、<strong>越南落地簽證 ＋ VIP 快速通關</strong>。</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📑</span> 入境越南辦理團體落地簽證所需資料</div>
+      <div class="alert-box alert-blue">
+        <strong>備註須知：</strong>辦理團體落地簽證務必備妥以下文件：
+        <ol style="margin-top:6px; padding-left:18px;">
+          <li><strong>台灣護照影本：</strong>清晰的有照片之個人資料頁面，且護照效期需自<strong>團體回程日算起達 6 個月以上</strong>。</li>
+          <li><strong>2 吋彩色大頭照 2 張：</strong>近期 6 個月內拍攝之白底清晰彩色照片。</li>
+        </ol>
+      </div>
+      <div class="alert-box alert-orange">
+        <strong>🛍️ 購物站聲明：</strong><br>
+        1. <strong>全程無購物站：</strong>保證無強迫推銷購物站（如乳膠、珠寶、茶葉等），讓您擁有充裕時間悠閒享受觀光。<br>
+        2. <strong>車上特產販售：</strong>遊覽車上司機/導遊會提供當地土產點心試吃販賣（如腰果、果乾、咖啡等），純屬便利服務，並非定點進店購物站。
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 4: HIGHLIGHTS -->
+  <section id="panel-highlights" class="tab-content-panel">
+    <div class="card">
+      <div class="card-title"><span class="icon">🎁</span> 特別貼心贈送項目</div>
+      <div class="perk-grid">
+        <div class="perk-card">
+          <h4>💧 每日礦泉水</h4>
+          <p>每位旅客每天提供 1 瓶優質瓶裝礦泉水，隨時補充水分。</p>
+        </div>
+        <div class="perk-card">
+          <h4>📷 團體紀念照</h4>
+          <p>行程中貼心安排拍攝全團團體紀念合照一張，留下珍貴出遊回憶。</p>
+        </div>
+        <div class="perk-card">
+          <h4>👒 越南風情斗笠</h4>
+          <p>每人致贈一頂越南傳統手工編織風情斗笠，拍照打卡超應景。</p>
+        </div>
+        <div class="perk-card">
+          <h4>🥤 每餐佐餐飲料</h4>
+          <p>每餐每人提供 1 瓶可樂或啤酒（自助餐及沙壩段除外）。</p>
+        </div>
+        <div class="perk-card">
+          <h4>☕ 法式下午茶時光</h4>
+          <p>品嚐傳統越式法式滴滴壺熱咖啡，體驗法式慢活悠閒時光。</p>
+        </div>
+        <div class="perk-card">
+          <h4>🛂 落地簽＋VIP 尊榮通關</h4>
+          <p>內含越南落地簽證及專人 VIP 快速通關禮遇，免除排長隊通關之苦。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🌟</span> 旅程精選頂級六大亮點</div>
+      <div class="perk-grid">
+        <div class="perk-card">
+          <h4>1. 征服番西邦峰 (3,143m)</h4>
+          <p>搭乘復古法式登山列車＋世界紀錄三線纜車直達中南半島屋脊，近距離仰望釋迦牟尼青銅大佛。</p>
+        </div>
+        <div class="perk-card">
+          <h4>2. 浪漫避暑山城沙壩</h4>
+          <p>四季如春的高山山城，漫步在沙壩百年石頭教堂與傳奇愛情市集廣場。</p>
+        </div>
+        <div class="perk-card">
+          <h4>3. 踏梅村與吉吉黑苗聚落</h4>
+          <p>深入梯田之鄉，近距離感受少數民族婦女手工刺繡，造訪沒有貓的美麗貓貓村。</p>
+        </div>
+        <div class="perk-card">
+          <h4>4. 小瑞士三島國家公園</h4>
+          <p>標高近千公尺的法式殖民避暑勝地，參觀法式古堡群、風中奇緣雲上咖啡與石頭教堂。</p>
+        </div>
+        <div class="perk-card">
+          <h4>5. 36古街電瓶車巡禮</h4>
+          <p>搭乘環保電瓶車漫遊千年李朝傳統街區，特別加贈品嚐濃醇香甜的椰奶咖啡！</p>
+        </div>
+        <div class="perk-card">
+          <h4>6. 兩大特色澎湃美饌</h4>
+          <p>享受沙壩特產無腥味「鱘龍魚火鍋＋燒烤吃到飽」與河內西湖「SEN蓮花庭園百匯百道美饌」。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL 5: CALCULATOR & PHRASES -->
+  <section id="panel-calc" class="tab-content-panel">
+    <div class="calc-card">
+      <div class="card-title" style="border:none; padding-bottom:0; margin-bottom:4px;">
+        <span class="icon">💱</span> 越南盾 (VND) 換算台幣 (TWD) 快算計算機
+      </div>
+      <p style="font-size:0.82rem; color:#78350f;">在當地買腰果、咖啡或手工藝品，輸入越南盾金額（例如：500,000 VND）：</p>
+      <div class="calc-row">
+        <input type="number" id="vnd-input" class="calc-input" placeholder="例如: 500000" value="100000" oninput="calcVnd()">
+        <span style="font-weight:800; font-size:1.1rem;">VND 越南盾</span>
+        <span style="font-size:1.2rem;">➔</span>
+        <div class="calc-result" id="twd-result">約 NT$ 130 元</div>
+      </div>
+      <div style="font-size:0.75rem; color:#92400e; margin-top:8px;">
+        💡 簡易心算秘訣：將越南盾金額「去掉後面三個零，再除以 2.5」（或乘 0.0013），即大約等於新台幣金額！
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🗣️</span> 實用越南生活會話卡</div>
+      <p style="font-size:0.84rem; color:var(--muted); margin-bottom:10px;">在當地購物或餐廳的實用會話對照：</p>
+      <div class="phrase-grid">
+        <div class="phrase-card">
+          <div class="phrase-vn">Xin chào (新早)</div>
+          <div class="phrase-cn">你好 / 您好</div>
+        </div>
+        <div class="phrase-card">
+          <div class="phrase-vn">Cảm ơn (感溫)</div>
+          <div class="phrase-cn">謝謝你</div>
+        </div>
+        <div class="phrase-card">
+          <div class="phrase-vn">Bao nhiêu tiền?</div>
+          <div class="phrase-cn">這個多少錢？</div>
+        </div>
+        <div class="phrase-card">
+          <div class="phrase-vn">Đắt quá (達刮)</div>
+          <div class="phrase-cn">太貴了，便宜一點！</div>
+        </div>
+        <div class="phrase-card">
+          <div class="phrase-vn">Cà phê dừa</div>
+          <div class="phrase-cn">椰奶咖啡</div>
+        </div>
+        <div class="phrase-card">
+          <div class="phrase-vn">Nhà vệ sinh ở đâu?</div>
+          <div class="phrase-cn">洗手間在哪裡？</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>北越沙壩 5 日精選行程 ｜ 越南航空直飛 ｜ 芒花登山列車・番西邦傳奇纜車・小瑞士三島公園・36古街</p>
+  </footer>
+
+</div>
+
+<script>
+  function calcVnd() {
+    var input = document.getElementById('vnd-input');
+    var val = parseFloat(input ? input.value : 0) || 0;
+    var twd = Math.round(val * 0.0013);
+    var res = document.getElementById('twd-result');
+    if (res) res.innerText = '約 NT$ ' + twd.toLocaleString() + ' 元';
+  }
+</script>
+
+</body>
+</html>
